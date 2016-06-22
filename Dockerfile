@@ -1,7 +1,7 @@
 FROM node:argon
-RUN mkdir -p /usr/src/twilioapi
-WORKDIR /usr/src/twilioapi
-COPY package.json /usr/src/twilioapi/
+RUN mkdir -p /usr/src/twilio-channel
+WORKDIR /usr/src/twilio-channel
+COPY package.json /usr/src/twilio-channel/
 RUN npm install
-COPY . /usr/src/twilioapi
+COPY . /usr/src/twilio-channel
 CMD [ "npm", "start" ]

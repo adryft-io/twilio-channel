@@ -1,5 +1,5 @@
 {
-  "name": "twilioapi",
+  "name": "twilio-channel",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shams-ali/twilioapi.git"
+    "url": "git+https://github.com/shams-ali/twilio-channel.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shams-ali/twilioapi/issues"
+    "url": "https://github.com/shams-ali/twilio-channel/issues"
   },
-  "homepage": "https://github.com/shams-ali/twilioapi#readme",
+  "homepage": "https://github.com/shams-ali/twilio-channel#readme",
   "dependencies": {
     "aws-sdk": "^2.4.0",
     "dotenv": "^2.0.0",
