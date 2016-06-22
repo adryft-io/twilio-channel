@@ -1,5 +1,5 @@
   require('dotenv').config();
-  const client = require('twilio')(process.env.ACCOUNT_SID, process.env.AUTH_TOKEN);
+  const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
   module.exports = function(data) {
     let body = JSON.parse(data.Body);
@@ -8,7 +8,7 @@
     console.log('message: ', message, 'phone: ', phone);
     client.messages.create({
       to: phone,
-      from: process.env.NUMBER,
+      from: process.env.TWILIO_NUMBER,
       body: message
     }, function(err, message){
         return err ? console.log('twilio', err) : console.log(message.sid)
