@@ -1,14 +1,15 @@
-var awsconfig = require('../aws.credentials.json')
+var AWS = require('aws-sdk');
+AWS.config.loadFromPath('./aws.credentials.json');
 var expect = require('chai').expect;
 
 describe('awsconfig', function() {
   it('should set accessKeyId', function(){
-    expect(awsconfig.accessKeyId).to.be.a('string');
+    expect(AWS.config.credentials.accessKeyId).to.be.a('string');
   });
   it('should set secretAccessKey', function(){
-    expect(awsconfig.secretAccessKey).to.be.a('string');
+    expect(AWS.config.credentials.secretAccessKey).to.be.a('string');
   });
   it('should set region', function(){
-    expect(awsconfig.region).to.be.a('string');
+    expect(AWS.config.region).to.be.a('string');
   });
 });

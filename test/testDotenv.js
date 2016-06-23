@@ -1,4 +1,4 @@
-var dotenv = require('dotenv').config
+var dotenv = require('dotenv').config({silent: true});
 var expect = require('chai').expect;
 
 describe('dotenv', function() {
