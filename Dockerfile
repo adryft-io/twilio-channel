@@ -1,4 +1,4 @@
-FROM node:argon
+FROM node
 RUN mkdir -p /usr/src/twilio-channel
 WORKDIR /usr/src/twilio-channel
 COPY package.json /usr/src/twilio-channel/
