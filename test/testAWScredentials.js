@@ -1,5 +1,5 @@
 var AWS = require('aws-sdk');
-AWS.config.loadFromPath('./aws.credentials.json');
+//AWS.config.loadFromPath('./aws.credentials.json');
 var expect = require('chai').expect;
 
 describe('awsconfig', function() {
