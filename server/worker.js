@@ -7,7 +7,7 @@ AWS.config.update({
 });
 
 var app = Consumer.create({
-  queueUrl: 'https://sqs.us-east-1.amazonaws.com/971458161724/twilio-channel',
+  queueUrl: process.env.QUEUE_URL'https://sqs.us-east-1.amazonaws.com/971458161724/twilio-channel',
   handleMessage: function(data, done){
     twilio(data);
     done();
