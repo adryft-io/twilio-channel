@@ -1,5 +1,5 @@
 require('dotenv').config({silent: true});
-var AWS = require('aws-sdk')
+var AWS = require('aws-sdk');
 AWS.config.update({ region: process.env.AWS_REGION });
 var Consumer = require('sqs-consumer');
 var twilio = require('./twilio.js');
