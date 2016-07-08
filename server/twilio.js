@@ -4,7 +4,8 @@
   module.exports = function(data) {
     var body = JSON.parse(data.Body);
     var phone = body.reaction_fields.phone;
-    var message = body.reaction_fields.message;
+    var text = body.action_fields.body || ''
+    var message = body.reaction_fields.message + '. ' + text
     console.log('message: ', message, 'phone: ', phone);
     client.messages.create({
       to: phone,
