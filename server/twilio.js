@@ -3,7 +3,7 @@
 
   module.exports = function(data) {
     var body = JSON.parse(data.Body);
-    var phone = body.reaction_fields.phone;
+    var phone = '+1' + body.reaction_fields.phone;
     var text = body.action_props.body || ''
     var message = body.reaction_fields.message + '. ' + text
     console.log('message: ', message, 'phone: ', phone);
